@@ -1,0 +1,45 @@
+html, body {
+  font-family: 'Noto Sans', serif;
+  font-size: 14px;
+  margin: 0;
+  height: 100%;
+}
+.outer_wrapper {
+  position: relative;
+  height: 100%;
+}
+.top_wrapper {
+  width: 100%;
+  height: 80px;
+  /*background: url('../img/logo.png') #222 no-repeat center center;*/
+  /*background: url('../img/yolyo_2.png') #222 no-repeat center center;*/
+  background: url('../img/yolyo_pad.png') #222 no-repeat center center;
+}
+.content_wrap {
+  min-height: 720px;
+}
+#infographic {
+  position: relative;
+  background: #cc4400;
+  vertical-align: middle;
+}
+#infographic div {
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  text-align: center;
+  width: 100%;
+  height: 70px;
+  color: #fff;
+  font-size: 3em;
+}
+
+#mission {
+  background: #5BBA5C;
+}
+
+.content_wrapper {
+  /*height: 100px;*/
+  height: 100%;
+  background: #77BAB9;
+}
