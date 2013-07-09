@@ -3,6 +3,7 @@ html, body {
   font-size: 14px;
   margin: 0;
   height: 100%;
+  padding: 0;
 }
 .outer_wrapper {
   position: relative;
@@ -16,7 +17,8 @@ html, body {
   background: url('../img/yolyo_pad.png') #222 no-repeat center center;
 }
 .content_wrap {
-  min-height: 720px;
+  /*min-height: 720px;*/
+  min-height: 600px;
 }
 #infographic {
   position: relative;
@@ -35,8 +37,74 @@ html, body {
 }
 
 #mission {
-  background: #5BBA5C;
+  background: #5EADBA;
+  position: relative;
 }
+#mission div {
+  color: #000;
+  font-weight: bold;
+  font-size: 5em;
+  line-height: 1.2em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  margin-top: -141px;
+  width: 100%;
+}
+#howto {
+  background: #8DBA99;
+  color: #000;
+  position: relative;
+}
+
+#howto div {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  position: absolute;
+  top: 50%;
+  width: 600px;
+  margin-top: -221.5px;
+  left: 50%;
+  margin-left: -300px;
+}
+
+#tool {
+  background: #BA7E61;
+  color: #000;
+  position: relative;
+}
+
+#tool div {
+  width: 100%;
+  text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1.2em;
+  position: absolute;
+  top: 50%;
+  height: 100px;
+  margin-top: -50px;
+}
+
+#team {
+  background: #BA4858;
+  color: #000;
+  position: relative;
+}
+
+#team div {
+  width: 100%;
+  text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1.2em;
+  position: absolute;
+  top: 50%;
+  height: 100px;
+  margin-top: -50px;
+}
+
+
 
 .content_wrapper {
   /*height: 100px;*/
