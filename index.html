@@ -10,6 +10,8 @@
   <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <link href="css/yolyo.css" rel="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script src='https://cdn.firebase.com/v0/firebase.js'></script>
   <script src="js/yolyo.js"></script>
 </head>
 <body>
@@ -24,23 +26,71 @@
 
       <div id="mission" class="content_wrap">
         <div>
-          <p>yolyo 充滿熱血、和對臺灣的愛</p>
-          <p>我們串聯這島上的年輕人</p>
-          <p>創造出正面能量的交流。</p>
+          <p>我們串聯世界各地的年輕人</p>
+          <p>一起去尋找回台灣發展的理由</p>
+        </div>
+      </div>
+
+      <div id="why" class="content_wrap">
+        <div>
+          <h1>Why?</h1>
+
+            <div class="paragraph_content">
+              <h3>我們想回家。</h3>
+              <p>朋友說，因為台灣有好食物、好女人。</p>
+              <p>Yolyo的Emily說，因為台灣有都蘭山脈——她所見過最美麗的地方。</p>
+              <p>更多人說，因為台灣是家的所在。</p>
+              <p></p>
+              <p>想回家並不奇怪，畢竟人都想要待在家、或是離家近的地方。</p>
+              <p></p>
+              <p><h3>但是情感上的理由並不能讓人奮不顧身。</h3></p>
+              <p></p>
+              <p>因為台灣不大理想的工作環境、因為更難看的國際政經情勢，更因為國外賺的錢可以給予生活上更加優渥的物質享受，所以許多年輕的台灣人才決定不回家了。</p>
+              <p></p>
+              <h3>到底現狀是什麼？</h3>
+              <p></p>
+              <p>Yolyo 想知道到底有沒有在海外的台灣年輕人們想回台灣發展未來？</p>
+              <p>Yolyo 更想知道那些已經從海外回到台灣的人才們（或曾在國外待過的前輩們），是什麼讓你回到台灣？</p>
+              <p></p>
+              <h3>我們交流吧。</h3>
+              <p></p>
+              <p>如果你是像我一樣，想要回到台灣發展未來的人，但是確不敢果斷地訂那張單程機票，那麼請你加入我們的交流平台，或許我們能一起找到那個讓我們奮不顧身的理由。</p>
+              <p></p>
+              <p>同時，我要邀請那些從海外回國的實踐家加入這個充滿熱血、思想開放、並積極樂於分享的平台。世界各地的台灣年輕人需要聆聽並參考你們的意見以及經驗。從自己的故事開始說起，自己回家的這段路是怎麼走的、是否有什麼對於自己領域的看法、甚至是文化上的觀察？我們希望能透過和你們的交流，讓也想回台灣的年輕人們能更奮不顧身、同時也能更有準備。</p>
+            </div>
+
         </div>
       </div>
 
       <div id="howto" class="content_wrap">
         <div>
-          <p>ic設計主管，社交社團總招集人的Yesmans:
-「資源分享是新創產業會遇到的很大的問題。人和人之間都存在信任感，投資者會害怕資源一直出，但是收不回來。」</p>
-          <p>設計學院出生，城市設計的新鮮人Janet:
-「資源不能共用是很大的問題。因為沒有跨領域的結合，導致金費重疊。例如有人設計了一個app，但是設計者卻從來沒有去傾聽、去理解使用者的族群所想要的。很多不同的團體在推不同的東西，因為缺乏溝通，所以都不知道原來大家都在做一樣的事情。」</p>
-          <p>輔導資商研三，同時也是熱血學運參與者婉真：
-          「社會大眾都不太了解社運的原因是因為，解釋一個議題背後的意義是需要需要很多文字，但是大多數的社運人士並沒有錢和力氣做這件事情。做社會運動的朋友們大多都缺乏資源、時間與力氣去去讓大家瞭解各議題對社會大眾的重要性。」
-          </p>
-          <p>對傳統工藝具有無限熱情，在汽車旅館工作的艾迪:
-          「資源沒有共享；就環境領域自己都欠缺交流。環境和社會議題是烽火連天，任何資源浪費都是種損耗，真的很傷。」</p>
+          <h1>How?</h1>
+          <div>
+            <ul>
+              <li>
+                每個禮拜五會介紹一位每週台柱
+                <ul>
+                  <li>Yolyo台柱是曾在海外居住，最終決定回台灣發展的實踐家，也是冒險家。</li>
+                </ul>
+              </li>
+              <li>一個禮拜的開放問題時間
+                <ul>
+                  <li>開放一個禮拜的時間給所有使用者針對台柱發問，每週台柱可以直接回應文章底下的留言，也可以選擇統一性回答。</li>
+                </ul>
+              </li>
+              <li>每個禮拜二統整發表台柱的回應
+                <ul>
+                  <li>以禮拜二為每週台柱的結尾，Yolyo會統一整理出台柱的回應精華。</li>
+                </ul>
+              </li>
+              <li>不管是台柱還是海外年輕人們，都能透過每週的討論更瞭解自己想要的是什麼。
+                <ul>
+                  <li>台柱：透過回答問題，他能夠更清楚認知到，現在的海外學子對於他在做的事情的看法。或許這些問題能夠促進對於這個產業改善和思考。</li>
+                  <li>參與者：了解台柱回台灣的心路歷程，和台柱在台灣遇到的問題和掙扎。這些的討論都可能是進一步奠定了回台灣的基石。 </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -50,11 +100,46 @@
         </div>
       </div>
 
-      <div id="team" class="content_wrap">
+      <div id="join" class="content_wrap">
         <div>
-          Who are we?
+          <p class="slogan">
+            <i class="icon-fire icon-2x"></i> 我們需要你。
+          </p>
+          <div class="intro_role">
+            <div>介紹使用者</div>
+            <div style="display: none;">
+              <p>你有認識哪些熱血回國的有為青年嗎？還是你自己就是那個奮不顧身回台灣的「笨蛋」呢？請為我們推薦每週台柱，在Yolyo分享回國後的經驗、同時也能和還在海外的台灣青年交流！</p>
+            </div>
+            <div style="display: none;">
+              <p>你很喜歡認識不同的人，又對於拓展人脈、分享正面價值充滿熱情嗎？來成為Yolyo的串聯者吧！基本的工作是每個月負責為Yolyo尋找適合的Yolyo台柱。</p>
+            </div>
+          </div>
+            <div id="join_form">
+              <form action="">
+                <div class="btn-group" data-toggle="buttons-radio">
+                  <button class="btn active">使用者</button>
+                  <button class="btn">推薦人</button>
+                  <button class="btn">加入團隊</button>
+                </div>
+                <button class="submit btn btn-inverse">我有興趣</button>
+                <div><input type="text" name="name" placeholder="稱呼"></div>
+                <div><input type="email" name="email" placeholder="Email"></div>
+              </form>
+              <div class="form_message" style="display: none;">
+                謝謝你對我們的計畫感興趣，我們將會在最快的速度內通知你消息！:)
+              </div>
+          </div>
         </div>
       </div>
+
+      <div id="team" class="content_wrap">
+        <div>
+          <h1>計畫發起人</h1>
+          <p>「 在美國求學十年總被問「要留下來還是回台灣？」這個老問題。而一直以來很愛說大道理、總是堅定的把人生目標鎖定為回台灣尋夢的我，在大學畢業後的這個暑假更改了一直以來的答案：要不是因為所愛的家人在台灣，我大概也不敢訂那張單程機票。我想，我需要去尋找那個真正讓我想要回家的理由。」- Emily</p>
+          <p>「你一定會覺得我瘋了，放著矽谷和舊金山創造出的機會，相對優渥的待遇和生活與工作的平衡，為何還要想著回台灣發展？我是這樣想的，為什麼同樣的機會不能由台灣年輕人自己創造？吸台灣奶水長大之後，卻在異鄉終老，不是我要的人生。」- Rae</p>
+        </div>
+      </div>
+
 
 
     </div>

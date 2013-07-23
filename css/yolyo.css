@@ -1,6 +1,6 @@
 html, body {
   font-family: 'Noto Sans', serif;
-  font-size: 14px;
+  font-size: 17px;
   margin: 0;
   height: 100%;
   padding: 0;
@@ -51,21 +51,60 @@ html, body {
   margin-top: -141px;
   width: 100%;
 }
+#why {
+  position: relative;
+}
+#why h1 {
+  float: right;
+}
+#why > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 850px;
+  height: 700px;
+  margin: -350px 0 0 -425px;
+}
+.paragraph_content p {
+  margin: 10px 20px;
+  line-height: 170%;
+}
+
 #howto {
-  background: #8DBA99;
+  background: #FEC99B;
   color: #000;
   position: relative;
 }
 
 #howto div {
-  font-size: 1.5em;
-  line-height: 1.2em;
+  font-size: 1.2em;
   position: absolute;
   top: 50%;
-  width: 600px;
-  margin-top: -221.5px;
+  width: 900px;
+  /*margin-top: -221.5px;*/
   left: 50%;
-  margin-left: -300px;
+  /*border: 1px solid #000;*/
+  height: 700px;
+  margin-top: -350px;
+  margin-left: -450px;
+}
+
+#howto div > ul {
+  width: 630px;
+  float: right;
+}
+
+#howto li {
+  line-height: 1.5em;
+}
+
+#howto > div > h1 {
+  font-size: 3em;
+  width: 220px;
+  border-bottom: .5em solid #BD865D;
+  position: relative;
+  top: 50%;
+  margin-top: -70px;
 }
 
 #tool {
@@ -86,6 +125,77 @@ html, body {
   margin-top: -50px;
 }
 
+#join .slogan {
+  font-size: 4em;
+  text-align: center;
+}
+
+#join > div {
+  padding-top: 50px;
+}
+
+#join .intro_role div {
+  text-align: center;
+}
+
+#join_form {
+  width: 635px;
+  /*border: 1px solid #000;*/
+  position: absolute;
+  left: 50%;
+  margin-left: -317.5px;
+  margin-top: 50px;
+}
+/*#join_form label {
+  font-size: 2em;
+  display: inline-block;
+  width: 100px;
+  margin-right: 20px;
+  text-align: right;
+  border: 1px solid #000;
+}*/
+#join_form > form > div {
+  margin: 15px 0;
+}
+
+#join_form > form input {
+  padding: 25px 20px;
+  font-size: 2em;
+  width: 400px;
+  border-radius: 20px;
+  line-height: 1.5em;
+}
+
+#join .intro_role {
+  background: #83BD83;
+  height: 100px;
+}
+
+#join_form .btn-group .btn {
+  /*padding: 25px 82px;*/
+  padding: 25px 55px;
+  font-size: 30px;
+}
+#join_form .btn-group .btn.active {
+}
+#join_form .btn-group .btn:first-child {
+  border-radius: 20px 0 0 20px;
+}
+#join_form .btn-group .btn:last-child {
+  border-radius: 0 20px 20px 0;
+}
+
+#join_form .submit {
+  border-radius: 20px;
+  float: right;
+  font-size: 3em;
+  margin-top: 15px;
+  width: 168px;
+  height: 168px;
+  line-height: 1.3em;
+  word-wrap: break-word;
+}
+
 #team {
   background: #BA4858;
   color: #000;
@@ -93,18 +203,27 @@ html, body {
 }
 
 #team div {
-  width: 100%;
+  width: 800px;
   text-align: center;
-  font-size: 5em;
   font-weight: bold;
   line-height: 1.2em;
   position: absolute;
-  top: 50%;
-  height: 100px;
-  margin-top: -50px;
+  top: 40%;
+  left: 50%;
+  margin-top: -175px;
+  margin-left: -400px;
+  font-size: 1.5em;
+  height: 350px;
 }
-
-
+#team h1 {
+  font-size: 3em;
+  text-align: right;
+  margin-bottom: 50px;
+}
+#team p {
+  line-height: 1.5em;
+  margin-bottom: 1.8em;
+}
 
 .content_wrapper {
   /*height: 100px;*/
