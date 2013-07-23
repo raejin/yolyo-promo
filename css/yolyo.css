@@ -22,7 +22,7 @@ html, body {
 }
 #infographic {
   position: relative;
-  background: #cc4400;
+  background: #FFD98E;
   vertical-align: middle;
 }
 #infographic div {
@@ -32,12 +32,12 @@ html, body {
   text-align: center;
   width: 100%;
   height: 70px;
-  color: #fff;
+  /*color: #fff;*/
   font-size: 3em;
 }
 
 #mission {
-  background: #5EADBA;
+  background: #CFFBF5;
   position: relative;
 }
 #mission div {
@@ -71,7 +71,7 @@ html, body {
 }
 
 #howto {
-  background: #FEC99B;
+  background: #FEE9F9;
   color: #000;
   position: relative;
 }
@@ -101,14 +101,14 @@ html, body {
 #howto > div > h1 {
   font-size: 3em;
   width: 220px;
-  border-bottom: .5em solid #BD865D;
+  border-bottom: .5em solid #D3B4C6;
   position: relative;
   top: 50%;
   margin-top: -70px;
 }
 
 #tool {
-  background: #BA7E61;
+  background: #BDD3C6;
   color: #000;
   position: relative;
 }
@@ -197,7 +197,7 @@ html, body {
 }
 
 #team {
-  background: #BA4858;
+  background: #F5F4D2;
   color: #000;
   position: relative;
 }
