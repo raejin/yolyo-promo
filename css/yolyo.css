@@ -22,7 +22,7 @@ html, body {
 }
 #infographic {
   position: relative;
-  background: #FFD98E;
+  background: #F6F2E3;
   vertical-align: middle;
 }
 #infographic div {
@@ -37,7 +37,7 @@ html, body {
 }
 
 #mission {
-  background: #CFFBF5;
+  background: #f9f9f9;
   position: relative;
 }
 #mission div {
@@ -52,6 +52,7 @@ html, body {
   width: 100%;
 }
 #why {
+  background: #F6F2E3;
   position: relative;
 }
 #why h1 {
@@ -71,7 +72,7 @@ html, body {
 }
 
 #howto {
-  background: #FEE9F9;
+  background: #F6F2E3;
   color: #000;
   position: relative;
 }
@@ -108,7 +109,7 @@ html, body {
 }
 
 #tool {
-  background: #BDD3C6;
+  background: #f9f9f9;
   color: #000;
   position: relative;
 }
@@ -129,7 +130,9 @@ html, body {
   font-size: 4em;
   text-align: center;
 }
-
+#join {
+  background: #F6F2E3;
+}
 #join > div {
   padding-top: 50px;
 }
@@ -167,7 +170,6 @@ html, body {
 }
 
 #join .intro_role {
-  background: #83BD83;
   height: 100px;
 }
 
@@ -197,7 +199,7 @@ html, body {
 }
 
 #team {
-  background: #F5F4D2;
+  background: #f9f9f9;
   color: #000;
   position: relative;
 }
