@@ -12,13 +12,11 @@ html, body {
 .top_wrapper {
   width: 100%;
   height: 80px;
-  /*background: url('../img/logo.png') #222 no-repeat center center;*/
-  /*background: url('../img/yolyo_2.png') #222 no-repeat center center;*/
   background: url('../img/yolyo_pad.png') #222 no-repeat center center;
 }
 .content_wrap {
   /*min-height: 720px;*/
-  min-height: 600px;
+  min-height: 500px;
 }
 #infographic {
   position: relative;
@@ -37,13 +35,14 @@ html, body {
 }
 
 #mission {
-  background: #f9f9f9;
+  background: url('../img/sitebackground1.jpg') no-repeat center center;
+  background-size: 100% auto;
   position: relative;
 }
 #mission div {
   color: #000;
   font-weight: bold;
-  font-size: 5em;
+  font-size: 3em;
   line-height: 1.2em;
   text-align: center;
   position: absolute;
@@ -52,19 +51,140 @@ html, body {
   width: 100%;
 }
 #why {
-  background: #F6F2E3;
+  background: url('../img/sitebackground2.jpg') no-repeat center center;
+  background-size: 100% auto;
   position: relative;
+}
+.paragraph_content > h2 {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  float: right;
+}
+.clearfix {
+  clear: both;
+}
+#why .paragraph_content {
+  font-size: 2em;
+  /*font-weight: bold;*/
+}
+#why_two {
+  position: relative;
+  background: url('../img/sitebackground3.jpg') no-repeat center center;
+  background-size: 100% auto;
+}
+#why_three {
+  position: relative;
+  background: url('../img/sitebackground4.jpg') no-repeat center center;
+  background-size: 100% auto;
+}
+#action {
+  position: relative;
+  background: url('../img/sitebackground5.jpg') no-repeat center center;
+  background-size: 100% auto;
+}
+#logistics {
+  position: relative;
+  background: url('../img/sitebackground6.jpg') no-repeat center center;
+  background-size: 100% auto;
+}
+#tool {
+  position: relative;
+  background: url('../img/sitebackground7.jpg') no-repeat center center;
+  background-size: 100% auto;
+}
+#tool_two {
+  position: relative;
+  background: url('../img/sitebackground8.jpg') no-repeat center center;
+  background-size: 100% auto;
 }
 #why h1 {
   float: right;
 }
-#why > div {
+#why.content_wrap > div, #why_two.content_wrap > div {
+  width: 700px;
+  height: 350px;
+  margin: -175px 0 0 -350px;
+  padding: 25px 35px;
+  background: rgba(255, 255, 255, 0.3);
+}
+#why_two.content_wrap > div {
+  padding: 15px 20px 5px;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 1.5em;
+  width: 600px;
+  height: 300px;
+  /*border: 1px solid #000;*/
+  margin: -150px 0 0 -300px;
+}
+#action.content_wrap > div {
+  font-size: 1.5em;
+  background: rgba(255, 255, 255, 0.4);
+  width: 700px;
+  height: 400px;
+  padding: 25px 30px 15px;
+  margin: -220px 0 0 -350px;
+}
+#action .paragraph_content ol {
+  padding-left: 70px;
+}
+#action .paragraph_content > h2 {
+  font-size: 2.5em;
+  color: #000;
+}
+#action .paragraph_content li {
+  line-height: 1.7em;
+}
+#logistics .paragraph_content  h2 {
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.2em;
+}
+#logistics.content_wrap > div {
+  font-size: 1.3em;
+  width: 1200px;
+  height: 350px;
+  /*border: 1px solid #000;*/
+  margin: -125px 0 0 -600px;
+}
+#logistics .paragraph_content .small_box {
+  width: 300px;
+  display: inline-block;
+  /*border: 1px solid #000;*/
+  background: rgba(255, 255, 255, 0.4);
+  padding: 10px 15px;
+}
+#logistics .paragraph_content .left {
+  float: left;
+  margin-right: 100px;
+}
+#logistics .paragraph_content .left {
+  float: left;
+}
+#logistics .paragraph_content .right {
+  float: right;
+}
+
+#tool_two > div, #tool > div, #logistics > div, #why > div, #why_two > div, #why_three > div, #action > div {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 850px;
-  height: 700px;
-  margin: -350px 0 0 -425px;
+}
+#why_three.content_wrap > div {
+  padding: 15px 25px 5px;
+  border-radius: 10px;
+  font-size: 1.4em;
+  width: 570px;
+  height: 500px;
+  /*border: 1px solid #000;*/
+  margin: -250px 0 0 -50px;
+  background: rgba(255, 255, 255, 0.7);
+}
+#why_three.content_wrap h2 {
+  font-size: 2em;
+}
+.paragraph_content > h2 > span {
+  font-size: 1.2em;
+  color: #000;
 }
 .paragraph_content p {
   margin: 10px 20px;
@@ -108,23 +228,6 @@ html, body {
   margin-top: -70px;
 }
 
-#tool {
-  background: #f9f9f9;
-  color: #000;
-  position: relative;
-}
-
-#tool div {
-  width: 100%;
-  text-align: center;
-  font-size: 5em;
-  font-weight: bold;
-  line-height: 1.2em;
-  position: absolute;
-  top: 50%;
-  height: 100px;
-  margin-top: -50px;
-}
 
 #join .slogan {
   font-size: 4em;
@@ -228,7 +331,8 @@ html, body {
 }
 
 .content_wrapper {
-  /*height: 100px;*/
+  min-width: 813px;
+  min-height: 500px;
   height: 100%;
-  background: #77BAB9;
+  /*background: #77BAB9;*/
 }
