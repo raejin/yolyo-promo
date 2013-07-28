@@ -30,9 +30,11 @@ $(function () {
         prevPageNumber = currentPageNumber ? currentPageNumber - 1: 0;
 
     if (action === 'next') {
-      document.body.scrollTop = nextPageNumber * windowHeight;
+      // document.body.scrollTop = nextPageNumber * windowHeight;
+      $(document).scrollTop(nextPageNumber * windowHeight);
     } else if (action === 'prev') {
-      document.body.scrollTop = prevPageNumber * windowHeight;
+      // document.body.scrollTop = prevPageNumber * windowHeight;
+      $(document).scrollTop(prevPageNumber * windowHeight);
     }
   }
 
@@ -50,6 +52,38 @@ $(function () {
         break;
       }
     });
+  });
+
+  var hashMap = [
+    'mission',
+    'why',
+    'why_two',
+    'why_three',
+    'action',
+    'tool',
+    'logistics',
+    'join',
+    'team'
+  ];
+
+  var oldPageNumber = Math.floor(document.body.scrollTop / $(window).height());
+
+  $(document).on('scroll', function () {
+    var currentPageNumber = Math.floor(document.body.scrollTop / $(window).height()),
+        hashbang = '#' + hashMap[currentPageNumber - 1];
+    if (currentPageNumber !== oldPageNumber && currentPageNumber > 0) {
+      if (history.pushState) {
+        history.pushState(null, "what is Yolyo", hashbang);
+      }
+      else {
+        window.location.hash = hashbang;
+      }
+      oldPageNumber = currentPageNumber;
+    } else if (currentPageNumber !== oldPageNumber && currentPageNumber === 0) {
+      history.pushState(null, "what is Yolyo", window.location.pathname + window.location.search);
+      oldPageNumber = currentPageNumber;
+    }
+
   });
 
   $(document).on('keydown', function (evt) {
