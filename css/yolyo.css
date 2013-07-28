@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   font-family: 'Noto Sans', serif;
   font-size: 17px;
   margin: 0;
@@ -12,25 +13,22 @@ html, body {
 .top_wrapper {
   width: 100%;
   height: 80px;
-  background: url('../img/yolyo_pad.png') #222 no-repeat center center;
+  background: url('../img/yolyo_pad.png') #222222 no-repeat center center;
 }
 .content_wrap {
   min-height: 500px;
   position: relative;
   width: 100%;
-  & > div {
-    font-size: 1.5em;
-  }
 }
-
+.content_wrap > div {
+  font-size: 1.5em;
+}
 .background_regular {
   background-size: 100% auto !important;
 }
-
 .background_different {
   background-size: auto 100% !important;
 }
-
 #infographic {
   background: #F6F2E3;
   vertical-align: middle;
@@ -44,7 +42,6 @@ html, body {
   height: 70px;
   font-size: 3em;
 }
-
 #mission div {
   color: #000;
   font-weight: bold;
@@ -56,21 +53,18 @@ html, body {
   margin-top: -141px;
   width: 100%;
 }
-.paragraph_content {
-  & > h2 {
-    font-size: 1.4em;
-    margin-bottom: 20px;
-    float: right;
-    span {
-      font-size: 1.2em;
-      color: #000;
-    }
-  }
-  p {
-    // line-height: 1.5em;
-    margin: 10px 20px;
-    line-height: 170%;
-  }
+.paragraph_content > h2 {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  float: right;
+}
+.paragraph_content > h2 span {
+  font-size: 1.2em;
+  color: #000;
+}
+.paragraph_content p {
+  margin: 10px 20px;
+  line-height: 170%;
 }
 .clearfix {
   clear: both;
@@ -108,13 +102,13 @@ html, body {
 #why h1 {
   float: right;
 }
-#why.content_wrap > div, #why_two.content_wrap > div {
+#why.content_wrap > div,
+#why_two.content_wrap > div {
   width: 700px;
   height: 300px;
   margin: -150px 0 0 -350px;
   padding: 35px 35px 25px;
   background: rgba(255, 255, 255, 0.5);
-  // background: rgba(255, 255, 255, 0.3);
 }
 #why_two.content_wrap > div {
   padding: 40px 35px 15px;
@@ -139,7 +133,7 @@ html, body {
 #action .paragraph_content li {
   line-height: 1.7em;
 }
-#logistics .paragraph_content  h2 {
+#logistics .paragraph_content h2 {
   text-align: center;
   line-height: 1.2em;
 }
@@ -147,12 +141,14 @@ html, body {
   width: 1200px;
   height: 350px;
   /*border: 1px solid #000;*/
+
   margin: -125px 0 0 -600px;
 }
 #logistics .paragraph_content .small_box {
   width: 300px;
   display: inline-block;
   /*border: 1px solid #000;*/
+
   background: rgba(255, 255, 255, 0.6);
   padding: 10px 15px;
 }
@@ -166,50 +162,51 @@ html, body {
 #logistics .paragraph_content .right {
   float: right;
 }
-
-#tool_two > div, #tool > div, #logistics > div, #why > div, #why_two > div, #why_three > div, #action > div {
+#tool_two > div,
+#tool > div,
+#logistics > div,
+#why > div,
+#why_two > div,
+#why_three > div,
+#action > div {
   position: absolute;
   top: 50%;
   left: 50%;
 }
 #why_three.content_wrap > div {
   padding: 35px 25px 35px;
-  // border-radius: 10px;
   width: 570px;
   height: 550px;
   /*border: 1px solid #000;*/
+
   margin: -310px 0 0 -285px;
-  // margin: -310px 0 0 -50px;
   background: rgba(255, 255, 255, 0.8);
 }
-
 #howto {
   background: #F6F2E3;
   color: #000;
   position: relative;
 }
-
 #howto div {
   position: absolute;
   top: 50%;
   width: 900px;
   /*margin-top: -221.5px;*/
+
   left: 50%;
   /*border: 1px solid #000;*/
+
   height: 700px;
   margin-top: -350px;
   margin-left: -450px;
 }
-
 #howto div > ul {
   width: 630px;
   float: right;
 }
-
 #howto li {
   line-height: 1.5em;
 }
-
 #howto > div > h1 {
   width: 220px;
   border-bottom: .5em solid #D3B4C6;
@@ -217,24 +214,20 @@ html, body {
   top: 50%;
   margin-top: -70px;
 }
-
-
 #join .slogan {
   font-size: 4em;
   text-align: center;
 }
-
 #join > div {
   padding-top: 50px;
 }
-
 #join .intro_role div {
   text-align: center;
 }
-
 #join_form {
   width: 635px;
   /*border: 1px solid #000;*/
+
   position: absolute;
   left: 50%;
   margin-left: -317.5px;
@@ -251,7 +244,6 @@ html, body {
 #join_form > form > div {
   margin: 15px 0;
 }
-
 #join_form > form input {
   padding: 25px 20px;
   font-size: 2em;
@@ -259,17 +251,14 @@ html, body {
   border-radius: 20px;
   line-height: 1.5em;
 }
-
 #join .intro_role {
   height: 100px;
 }
-
 #join_form .btn-group .btn {
   /*padding: 25px 82px;*/
+
   padding: 25px 55px;
   font-size: 30px;
-}
-#join_form .btn-group .btn.active {
 }
 #join_form .btn-group .btn:first-child {
   border-radius: 20px 0 0 20px;
@@ -277,7 +266,6 @@ html, body {
 #join_form .btn-group .btn:last-child {
   border-radius: 0 20px 20px 0;
 }
-
 #join_form .submit {
   border-radius: 20px;
   float: right;
@@ -288,7 +276,6 @@ html, body {
   line-height: 1.3em;
   word-wrap: break-word;
 }
-
 #team > div {
   width: 800px;
   text-align: center;
@@ -310,10 +297,10 @@ html, body {
   line-height: 1.5em;
   margin-bottom: 1.8em;
 }
-
 .content_wrapper {
   min-width: 813px;
   min-height: 500px;
   height: 100%;
   /*background: #77BAB9;*/
+
 }
