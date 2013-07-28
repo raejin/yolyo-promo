@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'Noto Sans', serif;
+  font-family: 'Noto Sans', 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif, serif;
   font-size: 17px;
   margin: 0;
   height: 100%;
@@ -34,6 +34,24 @@ html, body {
 #infographic {
   background: #F6F2E3;
   vertical-align: middle;
+}
+#logo_page {
+  // background: #f9f9f9;
+  background: url('../img/sitebackground0.jpg') no-repeat center center;
+  & > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 328px;
+    margin: -164px 0 0 -500px;
+  }
+  .logo_placement {
+    background: url('../img/cyan_logo.jpg') no-repeat center center;
+    width: 1000px;
+    height: 328px;
+    background-size: 100%;
+  }
 }
 #infographic div {
   position: absolute;
@@ -91,7 +109,7 @@ html, body {
   background: url('../img/sitebackground5.jpg') no-repeat center center;
 }
 #logistics {
-  background: url('../img/sitebackground6.jpg') no-repeat center center;
+  background: url('../img/sitebackground6_edit.jpg') no-repeat center center;
 }
 #tool {
   background: url('../img/sitebackground7.jpg') no-repeat center center;
@@ -220,8 +238,13 @@ html, body {
 
 
 #join .slogan {
-  font-size: 4em;
+  font-size: 2em;
   text-align: center;
+  margin-bottom: 50px;
+  line-height: 1.2em;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px 0;
+  font-weight: bold;
 }
 
 #join > div {
@@ -288,27 +311,35 @@ html, body {
   line-height: 1.3em;
   word-wrap: break-word;
 }
-
-#team > div {
-  width: 800px;
-  text-align: center;
-  font-weight: bold;
-  line-height: 1.2em;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  margin-top: -175px;
-  margin-left: -400px;
-  height: 350px;
-}
-#team h1 {
-  font-size: 3em;
-  text-align: right;
-  margin-bottom: 50px;
-}
-#team p {
-  line-height: 1.5em;
-  margin-bottom: 1.8em;
+#team {
+  & > div {
+    width: 1200px;
+    height: 700px;
+    // font-weight: bold;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    // border: 1px solid #000;
+    // p {
+    //   font-size: 0.6em;
+    // }
+    font-size: 0.95em;
+    #member_emily {
+      background-image: url('../img/sitebackground10_emily.png');
+    }
+    #member_rae {
+      background-image: url('../img/sitebackground10_rae.png');
+    }
+    .member_quote {
+      display: inline-block;
+      width: 500px;
+      height: 260px;
+      vertical-align: middle;
+      background: rgba(255, 255, 255, 0.9) no-repeat right 30px center;
+      padding: 15px 150px 20px 15px;
+      // padding-right: 150px;
+    }
+  }
 }
 
 .content_wrapper {

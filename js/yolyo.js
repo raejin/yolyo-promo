@@ -16,12 +16,12 @@ $(function () {
       } else if ($(this).hasClass('background_different')) {
         $(this).removeClass('background_different').addClass('background_regular');
       }
-
-      if (index === 0) {
-        $(this).css('height', (windowHeight - 80) + 'px');
-      } else {
-        $(this).css('height', windowHeight + 'px');
-      }
+      $(this).css('height', windowHeight + 'px');
+      // if (index === 0) {
+      //   $(this).css('height', (windowHeight - 80) + 'px');
+      // } else {
+      //   $(this).css('height', windowHeight + 'px');
+      // }
     });
   }
 

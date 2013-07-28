@@ -6,7 +6,8 @@
   <link rel="icon" type="image/png" href="img/yolyo-border-small-32.png">
   <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
   <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="css/yolyo.css">
   <!--
@@ -14,20 +15,31 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js"></script>
    -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <!--
   <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+   -->
+  <script src="js/bootstrap.min.js"></script>
   <script src='https://cdn.firebase.com/v0/firebase.js'></script>
   <script src="js/yolyo.js"></script>
 </head>
 <body>
   <div class="outer_wrapper">
+<!--
     <div class="top_wrapper">
     </div>
-
+ -->
     <div class="content_wrapper">
+
+      <div id="logo_page" class="content_wrap background_regular">
+        <div>
+          <div class="logo_placement"></div>
+        </div>
+      </div>
+<!--
       <div id="infographic" class="content_wrap background_regular">
         <div>Infographic placement</div>
       </div>
-
+ -->
       <div id="mission" class="content_wrap background_regular">
         <div>
           <p>yolyo 是一個網路平台</p>
@@ -136,7 +148,8 @@
       <div id="join" class="content_wrap background_regular">
         <div>
           <p class="slogan">
-            <i class="icon-fire icon-2x"></i> 我們需要你。
+            <!-- <i class="icon-fire icon-2x"></i> -->
+            參與 yolyo 這個計畫吧！<br>和我們一起找理由！
           </p>
           <div class="intro_role">
             <div>介紹使用者</div>
@@ -150,26 +163,33 @@
             <div id="join_form">
               <form action="">
                 <div class="btn-group" data-toggle="buttons-radio">
-                  <button class="btn active">使用者</button>
-                  <button class="btn">推薦人</button>
-                  <button class="btn">加入團隊</button>
+                  <button class="btn btn-info active">使用者</button>
+                  <button class="btn btn-info">推薦人</button>
+                  <button class="btn btn-info">加入團隊</button>
                 </div>
-                <button class="submit btn btn-inverse">我有興趣</button>
+<!--                 <button class="submit btn btn-inverse">我有興趣</button>
                 <div><input type="text" name="name" placeholder="稱呼"></div>
                 <div><input type="email" name="email" placeholder="Email"></div>
               </form>
               <div class="form_message" style="display: none;">
                 謝謝你對我們的計畫感興趣，我們將會在最快的速度內通知你消息！:)
-              </div>
+              </div> -->
           </div>
         </div>
       </div>
 
       <div id="team" class="content_wrap background_regular">
         <div>
-          <h1>計畫發起人</h1>
-          <p>「 在美國求學十年總被問「要留下來還是回台灣？」這個老問題。而一直以來很愛說大道理、總是堅定的把人生目標鎖定為回台灣尋夢的我，在大學畢業後的這個暑假更改了一直以來的答案：要不是因為所愛的家人在台灣，我大概也不敢訂那張單程機票。我想，我需要去尋找那個真正讓我想要回家的理由。」- Emily</p>
-          <p>「你一定會覺得我瘋了，放著矽谷和舊金山創造出的機會，相對優渥的待遇和生活與工作的平衡，為何還要想著回台灣發展？我是這樣想的，為什麼同樣的機會不能由台灣年輕人自己創造？吸台灣奶水長大之後，卻在異鄉終老，不是我要的人生。」- Rae</p>
+          <div class="paragraph_content">
+            <h2>計畫發起人</h2>
+            <div class="clearfix"></div>
+            <div id="member_emily" class="member_quote">
+              <p>「 在美國求學十年總被問「要留下來還是回台灣？」這個老問題。而一直以來很愛說大道理、總是堅定的把人生目標鎖定為回台灣尋夢的我，在大學畢業後的這個暑假更改了一直以來的答案：要不是因為所愛的家人在台灣，我大概也不敢訂那張單程機票。我想，我需要去尋找那個真正讓我想要回家的理由。」- Emily</p>
+            </div>
+            <div id="member_rae" class="member_quote">
+              <p>「你一定會覺得我瘋了，放著矽谷和舊金山創造出的機會，相對優渥的待遇和生活與工作的平衡，為何還要想著回台灣發展？我是這樣想的，為什麼同樣的機會不能由台灣年輕人自己創造？吸台灣奶水長大之後，卻在異鄉終老，不是我要的人生。」- Rae</p>
+            </div>
+          </div>
         </div>
       </div>
 
