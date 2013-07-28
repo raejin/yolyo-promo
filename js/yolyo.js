@@ -6,15 +6,22 @@ $(function () {
   $(window).trigger('resize');
 
   function windowResizeFn() {
-    var windowHeight = $(window).height();
+    var windowHeight    = $(window).height(),
+        windowWidth     = $(window).width(),
+        backgroundRatio = 1280 / 787.0;
     $('.content_wrap').each(function (index) {
+
+      if ((windowWidth / windowHeight) < backgroundRatio) {
+        $(this).removeClass('background_regular').addClass('background_different');
+      } else if ($(this).hasClass('background_different')) {
+        $(this).removeClass('background_different').addClass('background_regular');
+      }
 
       if (index === 0) {
         $(this).css('height', (windowHeight - 80) + 'px');
       } else {
         $(this).css('height', windowHeight + 'px');
       }
-
     });
   }
 
