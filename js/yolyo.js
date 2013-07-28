@@ -24,43 +24,56 @@ $(function () {
       // }
     });
   }
+  function goSection(action, windowHeight, scrollTop) {
+    var currentPageNumber = Math.floor(scrollTop / windowHeight),
+        nextPageNumber = (currentPageNumber !== 10) ? currentPageNumber + 1: 10,
+        prevPageNumber = currentPageNumber ? currentPageNumber - 1: 0;
 
-  $('#join_form').find('.btn-group').eq(0).find('.btn').each(function (index) {
+    if (action === 'next') {
+      document.body.scrollTop = nextPageNumber * windowHeight;
+    } else if (action === 'prev') {
+      document.body.scrollTop = prevPageNumber * windowHeight;
+    }
+  }
+
+  $('#join_role_buttons').find('button').each(function (index) {
     $(this).on('click', function () {
-      $('#join').find('.intro_role').find('div:visible').hide().end().find('div').eq(index).show();
+      switch (index) {
+        case 0:
+          $('#join_modal_user').modal('show');
+        break;
+        case 1:
+          $('#join_modal_guest').modal('show');
+        break;
+        case 2:
+          $('#join_modal_yolyo').modal('show');
+        break;
+      }
     });
   });
 
-  $('#join_form').find('button').on('click', function (event) {
-    event.preventDefault();
+  $(document).on('keydown', function (evt) {
+    var windowHeight = $(window).height();
+    if (evt.keyCode === 27 && $('.modal').is(':visible')) {
+      $('.modal').modal('hide');
+    } else if (evt.keyCode === 39 || evt.keyCode === 40) {
+      evt.preventDefault();
+      // right arrow
+      goSection('next' ,windowHeight, document.body.scrollTop);
+    } else if (evt.keyCode === 37 || evt.keyCode === 38) {
+      evt.preventDefault();
+      goSection('prev' ,windowHeight, document.body.scrollTop);
+    }
   });
 
-  $('#join_form').find('.submit').on('click', function (e) {
-    e.preventDefault();
-    $(this).parent().hide();
-    $('.form_message').show();
+  $('#join_modal_user').on('shown.bs.modal', function () {
+    $(this).find('input').eq(0).focus();
   });
-
-  $('#joinUsBtn').on('click', function () {
-    $('#join_modal').modal();
+  $('#join_modal_guest').on('shown.bs.modal', function () {
+    $(this).find('input').eq(0).focus();
   });
-
-  $('#submit_join_form').on('click', function (event) {
-    event.preventDefault();
-    $('#join_modal').find('form').trigger('submit');
-  });
-
-  $('#join_modal').find('form').on('submit', function (event) {
-    event.preventDefault();
-    var request_body = {
-      name: $(this).find('input').eq(0).val(),
-      email: $(this).find('input').eq(1).val()
-    };
-    joinList.push(request_body, function (res) {
-      $('#join_modal').find('form').hide().next().show();
-      $('#submit_join_form').hide().next().show();
-      if (res !== null) $('#join_modal').find('form').next().text('資料處理過程中出現問題，麻煩你再嘗試一次！');
-    });
+  $('#join_modal_yolyo').on('shown.bs.modal', function () {
+    $(this).find('input').eq(0).focus();
   });
 
 });
