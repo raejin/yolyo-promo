@@ -45,7 +45,7 @@ body {
   margin: -164px 0 0 -500px;
 }
 #logo_page .logo_placement {
-  background: url('../img/yolyo_primary_subscript.jpg') no-repeat center center;
+  background: url('../img/yolyo_lined_transparent.png') rgba(119, 198, 215, 0.8) no-repeat center center;
   width: 1000px;
   height: 328px;
   background-size: 100%;
@@ -324,8 +324,14 @@ body {
   width: 500px;
   height: 260px;
   vertical-align: middle;
-  background: rgba(255, 255, 255, 0.9) no-repeat right 30px center;
-  padding: 15px 150px 20px 15px;
+  background-position: right center;
+  background-origin: content-box, padding-box;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px 20px 20px 15px;
+}
+#team > div .member_quote p {
+  margin-right: 130px;
 }
 .content_wrapper {
   min-width: 813px;
