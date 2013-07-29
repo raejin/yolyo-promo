@@ -83,7 +83,6 @@ $(function () {
       history.pushState(null, "what is Yolyo", window.location.pathname + window.location.search);
       oldPageNumber = currentPageNumber;
     }
-
   });
 
   $(document).on('keydown', function (evt) {
@@ -108,6 +107,20 @@ $(function () {
   });
   $('#join_modal_yolyo').on('shown.bs.modal', function () {
     $(this).find('input').eq(0).focus();
+  });
+
+  $('#join_modal_user').find('form').on('submit', function () {
+    console.log('submit yo');
+  });
+
+  $('form').find('input').on('keypress', function (evt) {
+    if (evt.keyCode === 13) {
+      $(this).closest('.modal-body').next().find('.submit').trigger('click');
+    }
+  });
+
+  $('#join_modal_user').find('.submit').on('click', function () {
+    console.log("testing yo");
   });
 
 });
