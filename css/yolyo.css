@@ -6,6 +6,14 @@ body {
   height: 100%;
   padding: 0;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Noto Sans', 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif, serif;
+}
 .outer_wrapper {
   position: relative;
   height: 100%;
@@ -128,6 +136,9 @@ body {
 #join {
   background: url('../img/sitebackground9.jpg') no-repeat center center;
 }
+#join_modal_yolyo .modal-body {
+  padding-bottom: 20px;
+}
 #join_modal_yolyo h3 {
   margin-bottom: 25px;
   text-align: center;
@@ -183,7 +194,7 @@ body {
   line-height: 1.7em;
 }
 #guest .paragraph_content .small_box_top {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   font-size: 0.9em;
   padding: 10px 15px;
   margin-bottom: 20px;
@@ -193,7 +204,7 @@ body {
   display: inline-block;
   /*border: 1px solid #000;*/
 
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   padding: 10px 15px;
   font-size: 0.8em;
 }
@@ -210,8 +221,8 @@ body {
 }
 #guest.content_wrap > div {
   width: 1000px;
-  height: 492px;
-  margin: -296px 0 0 -500px;
+  height: 481px;
+  margin: -240.5px 0 0 -500px;
 }
 #tool_two > div,
 #guest > div,
@@ -274,12 +285,23 @@ body {
 }
 .modal-dialog .modal-footer .btn {
   width: 100%;
+  display: block;
+}
+.modal-dialog .modal-footer .btn + .btn {
+  margin-left: 0;
+}
+.modal-dialog .modal-body {
+  padding-bottom: 5px;
 }
 .modal-dialog .input-group {
+  position: relative;
   margin-bottom: 15px;
 }
 .modal-dialog .input-group input {
   border-color: #428bca;
+}
+.modal-dialog .input-group .tooltip {
+  font-size: 0.9em;
 }
 .modal-dialog .input-group-addon {
   background: #428bca;

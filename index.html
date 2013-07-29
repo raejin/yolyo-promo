@@ -159,24 +159,29 @@
           <form>
             <div class="input-group">
               <span class="input-group-addon input-large">@</span>
-              <input type="email" tabindex="0" class="form-control input-large" placeholder="E-mail">
+              <input name="email" type="email" tabindex="0" class="form-control input-large" placeholder="E-mail">
             </div>
             <div class="input-group">
               <span class="input-group-addon input-large">臺灣人你在哪裡？</span>
-              <input type="text" tabindex="0" class="form-control input-large" placeholder="在哪個地方打拼？">
+              <input name="where" type="text" tabindex="0" class="form-control input-large" placeholder="在哪個地方打拼？">
             </div>
             <div class="input-group">
               <span class="input-group-addon input-large">年輕人你在做什麼？</span>
-              <input type="text" tabindex="0" class="form-control input-large" placeholder="大學生？研究所？工作？">
+              <input name="what" type="text" tabindex="0" class="form-control input-large" placeholder="大學生？研究所？工作？">
             </div>
             <div class="input-group">
               <span class="input-group-addon input-large">和我們分享一個目標或是夢想吧！</span>
-              <input type="text" tabindex="0" class="form-control input-large">
+              <input name="dream" type="text" tabindex="0" class="form-control input-large">
             </div>
           </form>
         </div>
+        <div class="modal-body" style="display: none;">
+          <p>謝謝你對 Yolyo 感興趣，我們已經收到你的資料囉！:D</p>
+          <p>我們將會在最快的時間內通知你消息，感謝！</p>
+        </div>
         <div class="modal-footer">
           <button class="submit btn btn-primary btn-large">加入</button>
+          <button class="gotit btn btn-success btn-large" data-dismiss="modal" style="display: none;">了解</button>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -225,8 +230,12 @@
 
           </form>
         </div>
+        <div class="modal-body" style="display: none;">
+          <p>謝謝你的推薦，我們已經收到囉！</p>
+        </div>
         <div class="modal-footer">
-          <button class="btn btn-primary btn-large">推薦！</button>
+          <button class="submit btn btn-primary btn-large">推薦臺柱</button>
+          <button class="gotit btn btn-success btn-large" style="display: none;">了解</button>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

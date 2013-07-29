@@ -1,5 +1,3 @@
-var joinList = new Firebase('https://join-yolyo.firebaseIO.com/join_list');
-
 $(function () {
 
   $(window).resize(windowResizeFn);
@@ -86,16 +84,18 @@ $(function () {
   });
 
   $(document).on('keydown', function (evt) {
-    var windowHeight = $(window).height();
-    if (evt.keyCode === 27 && $('.modal').is(':visible')) {
-      $('.modal').modal('hide');
-    } else if (evt.keyCode === 39 || evt.keyCode === 40) {
-      evt.preventDefault();
-      // right arrow
-      goSection('next' ,windowHeight, document.body.scrollTop);
-    } else if (evt.keyCode === 37 || evt.keyCode === 38) {
-      evt.preventDefault();
-      goSection('prev' ,windowHeight, document.body.scrollTop);
+    if (!$('.modal-backdrop').length) {
+      var windowHeight = $(window).height();
+      if (evt.keyCode === 27 && $('.modal').is(':visible')) {
+        $('.modal').modal('hide');
+      } else if (evt.keyCode === 39 || evt.keyCode === 40) {
+        evt.preventDefault();
+        // right arrow
+        goSection('next' ,windowHeight, document.body.scrollTop);
+      } else if (evt.keyCode === 37 || evt.keyCode === 38) {
+        evt.preventDefault();
+        goSection('prev' ,windowHeight, document.body.scrollTop);
+      }
     }
   });
 
@@ -116,17 +116,98 @@ $(function () {
   $('form').find('input').on('keypress', function (evt) {
     if (evt.keyCode === 13) {
       $(this).closest('form').trigger('submit');
-      // $(this).closest('.modal-body').next().find('.submit').trigger('click');
     }
+  });
+
+  var emailPattern = /^[\w._-]+[+]?[\w._-]+@[\w.-]+\.[a-zA-Z]{2,6}$/;
+
+  $('#join_modal_guest').find('form').on('submit', function (evt) {
+    evt.preventDefault();
+    console.log("submit");
   });
 
   $('#join_modal_user').find('form').on('submit', function (evt) {
     evt.preventDefault();
-    console.log("real submit");
+    var emailInput = $(this).find('input').eq(0),
+        locationInput = $(this).find('input').eq(1),
+        doWhatInput = $(this).find('input').eq(2),
+        dreamInput = $(this).find('input').eq(3),
+        isEmail = emailInput.val().match(emailPattern);
+    emailInput.tooltip({
+      title: "E-mail 格式不正確",
+      trigger: "manual"
+    });
+    locationInput.tooltip({
+      title: "跟我們分享一下你在哪裡打拼吧",
+      trigger: "manual"
+    });
+    doWhatInput.tooltip({
+      title: "我們想要了解使用者的多樣性，分享一下你在做什麼吧！",
+      trigger: "manual"
+    });
+    dreamInput.tooltip({
+      title: "不需要很偉大，只是一個簡單的、短期的夢想即可 :)",
+      trigger: "manual"
+    });
+    if (isEmail === null) {
+      emailInput.parent().addClass('has-error');
+      emailInput.tooltip('show');
+    } else {
+      emailInput.parent().removeClass('has-error');
+      emailInput.tooltip('hide');
+    }
+    if (locationInput.val().length <= 1) {
+      locationInput.parent().addClass('has-error');
+      locationInput.tooltip('show');
+    } else {
+      locationInput.parent().removeClass('has-error');
+      locationInput.tooltip('hide');
+    }
+    if (doWhatInput.val().length <= 2) {
+      doWhatInput.parent().addClass('has-error');
+      doWhatInput.tooltip('show');
+    } else {
+      doWhatInput.parent().removeClass('has-error');
+      doWhatInput.tooltip('hide');
+    }
+    if (dreamInput.val().length <= 2) {
+      dreamInput.parent().addClass('has-error');
+      dreamInput.tooltip('show');
+    } else {
+      dreamInput.parent().removeClass('has-error');
+      dreamInput.tooltip('hide');
+    }
+
+    if (isEmail && locationInput.val().length > 1 && doWhatInput.val().length > 2 && dreamInput.val().length > 2) {
+
+      var joinList = new Firebase('https://join-yolyo.firebaseIO.com/join_list');
+      joinList.push({
+        email: emailInput.val(),
+        where: locationInput.val(),
+        what: doWhatInput.val(),
+        dream: dreamInput.val()
+      }, function (response) {
+        $(this).parent().hide().next().show();
+        $(this).parent().next().next().find('.submit').hide().next().show();
+
+        // resetting the form, and tooltips
+        $(this)[0].reset();
+        $(this).find('input').tooltip('hide');
+
+        $('#join_modal_user').on('hidden.bs.modal', function () {
+          $(this).find('.modal-body').eq(0).show().next().hide();
+          $(this).find('.submit').eq(0).show().next().hide();
+        });
+      });
+    } // if form valid
+
   });
 
   $('#join_modal_user').find('.submit').on('click', function () {
-    console.log("testing yo");
+    $(this).parent().prev().prev().find('form').trigger('submit');
+  });
+  $('#join_modal_guest').find('.submit').on('click', function () {
+    $(this).parent().prev().prev().find('form').trigger('submit');
   });
 
 });
