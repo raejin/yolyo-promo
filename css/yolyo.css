@@ -196,8 +196,12 @@ h6 {
 #guest .paragraph_content .small_box_top {
   background: rgba(255, 255, 255, 0.8);
   font-size: 0.9em;
-  padding: 10px 15px;
+  padding: 5px 15px;
   margin-bottom: 20px;
+}
+#guest .paragraph_content h2 {
+  font-weight: bold;
+  text-align: center;
 }
 #guest .paragraph_content .small_box {
   width: 320px;
@@ -205,12 +209,8 @@ h6 {
   /*border: 1px solid #000;*/
 
   background: rgba(255, 255, 255, 0.8);
-  padding: 10px 15px;
+  padding: 5px 15px;
   font-size: 0.8em;
-}
-#guest .paragraph_content .small_box > h2 {
-  font-weight: bold;
-  text-align: center;
 }
 #guest .paragraph_content .left {
   float: left;
@@ -221,8 +221,8 @@ h6 {
 }
 #guest.content_wrap > div {
   width: 1000px;
-  height: 481px;
-  margin: -240.5px 0 0 -500px;
+  height: 516px;
+  margin: -258px 0 0 -500px;
 }
 #tool_two > div,
 #guest > div,
@@ -241,39 +241,7 @@ h6 {
   /*border: 1px solid #000;*/
 
   margin: -285px 0 0 -350px;
-  background: rgba(255, 255, 255, 0.8);
-}
-#howto {
-  background: #F6F2E3;
-  color: #000;
-  position: relative;
-}
-#howto div {
-  position: absolute;
-  top: 50%;
-  width: 900px;
-  /*margin-top: -221.5px;*/
-
-  left: 50%;
-  /*border: 1px solid #000;*/
-
-  height: 700px;
-  margin-top: -350px;
-  margin-left: -450px;
-}
-#howto div > ul {
-  width: 630px;
-  float: right;
-}
-#howto li {
-  line-height: 1.5em;
-}
-#howto > div > h1 {
-  width: 220px;
-  border-bottom: .5em solid #D3B4C6;
-  position: relative;
-  top: 50%;
-  margin-top: -70px;
+  background: rgba(255, 255, 255, 0.9);
 }
 .modal-dialog {
   width: 800px;

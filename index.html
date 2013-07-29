@@ -122,6 +122,7 @@
         <div>
           <div class="paragraph_content">
             <div class="small_box_top">
+              <h2>特別企劃</h2>
               <p>每個禮拜，Yolyo 會邀請一位已經回臺灣發展的實踐家來擔任當週的駐站臺柱。除了分享自己本身的故事，駐站的一週期間內，臺柱們會更進一步的帶領有題目性質的討論。「每週一臺柱」計劃的目標是讓還未回台灣的年輕人們有機會了解目前台灣各產業、領域、及社會的現狀，讓大家能更瞭解甚至體會當今台灣社會的多面貌。</p>
             </div>
             <div class="small_box right">
@@ -160,6 +161,10 @@
             <div class="input-group">
               <span class="input-group-addon input-large">@</span>
               <input name="email" type="email" tabindex="0" class="form-control input-large" placeholder="E-mail">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon input-large">怎麼稱呼？</span>
+              <input name="name" type="text" tabindex="0" class="form-control input-large" placeholder="">
             </div>
             <div class="input-group">
               <span class="input-group-addon input-large">臺灣人你在哪裡？</span>
@@ -205,27 +210,27 @@
           <form>
             <div class="input-group">
               <span class="input-group-addon input-group-addon-info input-large">@</span>
-              <input type="text" tabindex="0" class="form-control input-large" placeholder="你的 E-mail">
+              <input type="text" name="email" tabindex="0" class="form-control input-large" placeholder="你的 E-mail">
             </div>
             <div class="input-group">
               <span class="input-group-addon input-group-addon-info input-large">你的稱呼</span>
-              <input type="text" tabindex="0" class="form-control input-large" placeholder="">
+              <input type="text" name="name" tabindex="0" class="form-control input-large" placeholder="">
             </div>
             <div class="input-group">
               <span class="input-group-addon input-large">@@</span>
-              <input type="text" tabindex="0" class="form-control input-large" placeholder="臺柱的 E-mail">
+              <input type="text" name="taizhu_email" tabindex="0" class="form-control input-large" placeholder="臺柱的 E-mail">
             </div>
             <div class="input-group">
               <span class="input-group-addon input-large">臺柱稱呼</span>
-              <input type="text" tabindex="0" class="form-control input-large" placeholder="">
+              <input type="text" name="taizhu_name" tabindex="0" class="form-control input-large" placeholder="">
             </div>
             <div class="input-group">
               <span class="input-group-addon input-large">臺柱身分</span>
-              <input type="text" tabindex="0" class="form-control input-large" placeholder="學生、創業家、職業、頭銜...等">
+              <input type="text" name="taizhu_occupation" tabindex="0" class="form-control input-large" placeholder="學生、創業家、職業、頭銜...等">
             </div>
             <div class="input-group">
               <span class="input-group-addon input-large">推薦原因</span>
-              <input type="text" tabindex="0" class="form-control input-large" placeholder="如果本人認識麻煩註明和臺柱的關係">
+              <input type="text" name="why_taizhu" tabindex="0" class="form-control input-large" placeholder="如果本人認識麻煩註明和臺柱的關係">
             </div>
 
           </form>
@@ -235,7 +240,7 @@
         </div>
         <div class="modal-footer">
           <button class="submit btn btn-primary btn-large">推薦臺柱</button>
-          <button class="gotit btn btn-success btn-large" style="display: none;">了解</button>
+          <button class="gotit btn btn-success btn-large" data-dismiss="modal" style="display: none;">了解</button>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -282,7 +287,7 @@
             </div>
             <div id="join_role_buttons" class="btn-group">
               <button type="button" class="btn btn-primary">使用者</button>
-              <button type="button" class="btn btn-primary">推薦人</button>
+              <button type="button" class="btn btn-primary">推薦臺柱</button>
               <button type="button" class="btn btn-primary">加入團隊</button>
             </div>
           </div>

@@ -84,6 +84,9 @@ $(function () {
   });
 
   $(document).on('keydown', function (evt) {
+    if (evt.keyCode === 27 && $('#join_modal_yolyo').is(':visible')) {
+      $('#join_modal_yolyo').modal('hide');
+    }
     if (!$('.modal-backdrop').length) {
       var windowHeight = $(window).height();
       if (evt.keyCode === 27 && $('.modal').is(':visible')) {
@@ -105,13 +108,6 @@ $(function () {
   $('#join_modal_guest').on('shown.bs.modal', function () {
     $(this).find('input').eq(0).focus();
   });
-  $('#join_modal_yolyo').on('shown.bs.modal', function () {
-    $(this).find('input').eq(0).focus();
-  });
-
-  $('#join_modal_user').find('form').on('submit', function () {
-    console.log('submit yo');
-  });
 
   $('form').find('input').on('keypress', function (evt) {
     if (evt.keyCode === 13) {
@@ -123,18 +119,120 @@ $(function () {
 
   $('#join_modal_guest').find('form').on('submit', function (evt) {
     evt.preventDefault();
-    console.log("submit");
+    var inputs        = $(this).find('input'),
+        emailInput    = inputs.eq(0),
+        nameInput     = inputs.eq(1),
+        taizhuEmail   = inputs.eq(2),
+        taizhuName    = inputs.eq(3),
+        taizhuDo      = inputs.eq(4),
+        whyTaizhu     = inputs.eq(5);
+
+    emailInput.tooltip({
+      title: "E-mail 格式不正確",
+      trigger: "manual"
+    });
+
+    taizhuEmail.tooltip({
+      title: "E-mail 格式不正確",
+      trigger: "manual"
+    });
+
+    nameInput.tooltip({
+      title: "怎麼稱呼？",
+      trigger: "manual"
+    });
+
+    taizhuName.tooltip({
+      title: "臺柱怎麼稱呼？",
+      trigger: "manual"
+    });
+
+    taizhuDo.tooltip({
+      title: "我們想要稍微了解一下臺柱所在的領域",
+      trigger: "manual"
+    });
+
+    whyTaizhu.tooltip({
+      title: "理由不需要很複雜，他可以只是你的朋友",
+      trigger: "manual"
+    });
+
+    inputs.each(function (index) {
+      if (index !== 0 && index !== 2) {
+        if (inputs.eq(index).val().length === 0) {
+          inputs.eq(index).parent().addClass('has-error');
+          inputs.eq(index).tooltip('show');
+        } else {
+          inputs.eq(index).parent().removeClass('has-error');
+          inputs.eq(index).tooltip('hide');
+        }
+      }
+    });
+
+    if (emailInput.val().match(emailPattern) === null) {
+      emailInput.parent().addClass('has-error');
+      emailInput.tooltip('show');
+    } else {
+      emailInput.parent().removeClass('has-error');
+      emailInput.tooltip('hide');
+    }
+    if (taizhuEmail.val().match(emailPattern) === null) {
+      taizhuEmail.parent().addClass('has-error');
+      taizhuEmail.tooltip('show');
+    } else {
+      taizhuEmail.parent().removeClass('has-error');
+      taizhuEmail.tooltip('hide');
+    }
+
+    var form = $(this);
+    if ($(this).find('.has-error').length === 0) {
+      var newTaizhuList = new Firebase('https://taizhu-yolyo.firebaseIO.com/taizu');
+      newTaizhuList.push({
+        email: emailInput.val(),
+        name: nameInput.val(),
+        taizhu: {
+          email: taizhuEmail.val(),
+          name: taizhuName.val(),
+          occupation: taizhuDo.val()
+        },
+        why: whyTaizhu.val()
+      }, function (response) {
+        if (response === null) {
+
+          form.parent().hide().next().show();
+          form.parent().next().next().find('.submit').hide().next().show();
+
+          // resetting the form, and tooltips
+          form[0].reset();
+          form.find('input').tooltip('hide');
+
+          $('#join_modal_guest').on('hidden.bs.modal', function () {
+            $(this).find('.modal-body').eq(0).show().next().hide();
+            $(this).find('.submit').eq(0).show().next().hide();
+          });
+        } else {
+          console.log("something went wrong");
+        }
+      });
+    }
+
   });
 
   $('#join_modal_user').find('form').on('submit', function (evt) {
     evt.preventDefault();
-    var emailInput = $(this).find('input').eq(0),
-        locationInput = $(this).find('input').eq(1),
-        doWhatInput = $(this).find('input').eq(2),
-        dreamInput = $(this).find('input').eq(3),
-        isEmail = emailInput.val().match(emailPattern);
+    var inputs        = $(this).find('input'),
+        emailInput    = inputs.eq(0),
+        nameInput     = inputs.eq(1),
+        locationInput = inputs.eq(2),
+        doWhatInput   = inputs.eq(3),
+        dreamInput    = inputs.eq(4),
+        isEmail       = emailInput.val().match(emailPattern);
     emailInput.tooltip({
       title: "E-mail 格式不正確",
+      trigger: "manual"
+    });
+    nameInput.tooltip({
+      title: "請留下大名",
       trigger: "manual"
     });
     locationInput.tooltip({
@@ -155,6 +253,13 @@ $(function () {
     } else {
       emailInput.parent().removeClass('has-error');
       emailInput.tooltip('hide');
+    }
+    if (nameInput.val().length === 0) {
+      nameInput.parent().addClass('has-error');
+      nameInput.tooltip('show');
+    } else {
+      nameInput.parent().removeClass('has-error');
+      nameInput.tooltip('hide');
     }
     if (locationInput.val().length <= 1) {
       locationInput.parent().addClass('has-error');
@@ -179,25 +284,30 @@ $(function () {
     }
 
     if (isEmail && locationInput.val().length > 1 && doWhatInput.val().length > 2 && dreamInput.val().length > 2) {
-
+      var form = $(this);
       var joinList = new Firebase('https://join-yolyo.firebaseIO.com/join_list');
       joinList.push({
+        name: nameInput.val(),
         email: emailInput.val(),
         where: locationInput.val(),
         what: doWhatInput.val(),
         dream: dreamInput.val()
       }, function (response) {
-        $(this).parent().hide().next().show();
-        $(this).parent().next().next().find('.submit').hide().next().show();
+        if (response === null) {
+          form.parent().hide().next().show();
+          form.parent().next().next().find('.submit').hide().next().show();
 
-        // resetting the form, and tooltips
-        $(this)[0].reset();
-        $(this).find('input').tooltip('hide');
+          // resetting the form, and tooltips
+          form[0].reset();
+          form.find('input').tooltip('hide');
 
-        $('#join_modal_user').on('hidden.bs.modal', function () {
-          $(this).find('.modal-body').eq(0).show().next().hide();
-          $(this).find('.submit').eq(0).show().next().hide();
-        });
+          $('#join_modal_user').on('hidden.bs.modal', function () {
+            $(this).find('.modal-body').eq(0).show().next().hide();
+            $(this).find('.submit').eq(0).show().next().hide();
+          });
+        } else {
+          console.log("something went wrong");
+        }
       });
     } // if form valid
 
