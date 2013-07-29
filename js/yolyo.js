@@ -61,7 +61,7 @@ $(function () {
     'why_three',
     'action',
     'tool',
-    'logistics',
+    'guest',
     'join',
     'team'
   ];
@@ -115,8 +115,14 @@ $(function () {
 
   $('form').find('input').on('keypress', function (evt) {
     if (evt.keyCode === 13) {
-      $(this).closest('.modal-body').next().find('.submit').trigger('click');
+      $(this).closest('form').trigger('submit');
+      // $(this).closest('.modal-body').next().find('.submit').trigger('click');
     }
+  });
+
+  $('#join_modal_user').find('form').on('submit', function (evt) {
+    evt.preventDefault();
+    console.log("real submit");
   });
 
   $('#join_modal_user').find('.submit').on('click', function () {

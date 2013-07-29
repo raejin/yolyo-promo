@@ -103,7 +103,7 @@ body {
 #action {
   background: url('../img/sitebackground5.jpg') no-repeat center center;
 }
-#logistics {
+#guest {
   background: url('../img/sitebackground6_edit.jpg') no-repeat center center;
 }
 #tool {
@@ -182,13 +182,13 @@ body {
 #action .paragraph_content li {
   line-height: 1.7em;
 }
-#logistics .paragraph_content .small_box_top {
+#guest .paragraph_content .small_box_top {
   background: rgba(255, 255, 255, 0.6);
   font-size: 0.9em;
   padding: 10px 15px;
   margin-bottom: 20px;
 }
-#logistics .paragraph_content .small_box {
+#guest .paragraph_content .small_box {
   width: 320px;
   display: inline-block;
   /*border: 1px solid #000;*/
@@ -197,24 +197,24 @@ body {
   padding: 10px 15px;
   font-size: 0.8em;
 }
-#logistics .paragraph_content .small_box > h2 {
+#guest .paragraph_content .small_box > h2 {
   font-weight: bold;
   text-align: center;
 }
-#logistics .paragraph_content .left {
+#guest .paragraph_content .left {
   float: left;
   margin-right: 20px;
 }
-#logistics .paragraph_content .right {
+#guest .paragraph_content .right {
   float: right;
 }
-#logistics.content_wrap > div {
+#guest.content_wrap > div {
   width: 1000px;
   height: 492px;
   margin: -296px 0 0 -500px;
 }
 #tool_two > div,
-#logistics > div,
+#guest > div,
 #why > div,
 #why_two > div,
 #why_three > div,
