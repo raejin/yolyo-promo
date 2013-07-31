@@ -123,26 +123,49 @@ h1, h2, h3, h4, h5, h6 {
 #guest {
   background: url('../img/sitebackground6_edit.jpg') no-repeat center center;
 }
-#tool {
+#forum {
   background: url('../img/sitebackground7.jpg') no-repeat center center;
-  & > div {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
+  & h2 {
   }
   &.content_wrap > div {
-    height: 70px;
-    margin-top: -70px;
+    position: absolute;
+    top: 50%;
+    // border: 1px solid #000;
+    height: 450px;
+    margin-top: -300px;
+    width: 100%;
+  }
+  & .slogan {
+    strong {
+      color: @primary;
+    }
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.2em;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px 0;
+    font-weight: bold;
   }
   .paragraph_content {
-    h1 {
-      font-size: 2.5em;
+    h2 {
+      // position: absolute;
+      // left: 50%;
+      float: none;
+      width: 800px;
+      // border: 1px solid #000;
+      text-align: center;
+      margin: 0 auto 25px;
+    }
+    & > p {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 15px 25px;
+      width: 800px;
+      margin: 25px auto 0;
 
     }
   }
 }
-#tool_two {
+#why_discourse {
   background: url('../img/sitebackground8.jpg') no-repeat center center;
 }
 #join {
@@ -251,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-#tool_two > div, #guest > div, #why > div, #why_two > div, #why_three > div, #action > div {
+#why_discourse > div, #guest > div, #why > div, #why_two > div, #why_three > div, #action > div {
   position: absolute;
   top: 50%;
   left: 50%;

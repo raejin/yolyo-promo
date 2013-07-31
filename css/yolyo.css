@@ -114,23 +114,40 @@ h6 {
 #guest {
   background: url('../img/sitebackground6_edit.jpg') no-repeat center center;
 }
-#tool {
+#forum {
   background: url('../img/sitebackground7.jpg') no-repeat center center;
 }
-#tool > div {
+#forum.content_wrap > div {
   position: absolute;
   top: 50%;
+  height: 450px;
+  margin-top: -300px;
   width: 100%;
+}
+#forum .slogan {
+  font-size: 2em;
   text-align: center;
+  line-height: 1.2em;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px 0;
+  font-weight: bold;
 }
-#tool.content_wrap > div {
-  height: 70px;
-  margin-top: -70px;
+#forum .slogan strong {
+  color: #428bca;
 }
-#tool .paragraph_content h1 {
-  font-size: 2.5em;
+#forum .paragraph_content h2 {
+  float: none;
+  width: 800px;
+  text-align: center;
+  margin: 0 auto 25px;
 }
-#tool_two {
+#forum .paragraph_content > p {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px 25px;
+  width: 800px;
+  margin: 25px auto 0;
+}
+#why_discourse {
   background: url('../img/sitebackground8.jpg') no-repeat center center;
 }
 #join {
@@ -224,7 +241,7 @@ h6 {
   height: 516px;
   margin: -258px 0 0 -500px;
 }
-#tool_two > div,
+#why_discourse > div,
 #guest > div,
 #why > div,
 #why_two > div,

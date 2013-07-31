@@ -58,7 +58,7 @@ $(function () {
     'why_two',
     'why_three',
     'action',
-    'tool',
+    'forum',
     'guest',
     'join',
     'team'
