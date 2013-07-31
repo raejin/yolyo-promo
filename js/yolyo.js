@@ -59,6 +59,7 @@ $(function () {
     'why_three',
     'action',
     'forum',
+    'discourse',
     'guest',
     'join',
     'team'

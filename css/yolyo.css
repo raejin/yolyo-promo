@@ -115,7 +115,7 @@ h6 {
   background: url('../img/sitebackground6_edit.jpg') no-repeat center center;
 }
 #forum {
-  background: url('../img/sitebackground7.jpg') no-repeat center center;
+  background: url('../img/wall.jpg') no-repeat center center;
 }
 #forum.content_wrap > div {
   position: absolute;
@@ -147,8 +147,43 @@ h6 {
   width: 800px;
   margin: 25px auto 0;
 }
-#why_discourse {
-  background: url('../img/sitebackground8.jpg') no-repeat center center;
+#discourse {
+  background: url('../img/bird-green.jpg') no-repeat center center;
+}
+#discourse.content_wrap > div {
+  position: absolute;
+  top: 50%;
+  height: 600px;
+  left: 0;
+  right: 0;
+  margin-top: -350px;
+}
+#discourse .vertical_box_container {
+  margin: 20px auto;
+  width: 970px;
+}
+#discourse .paragraph_content > h2 {
+  width: 960px;
+  float: none;
+  margin: 0 auto 25px;
+  text-align: right;
+}
+#discourse .vertical_box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 5px 20px;
+  width: 300px;
+  height: 500px;
+  display: inline-block;
+  margin-right: 35px;
+  float: left;
+}
+#discourse .vertical_box h2 {
+  float: none;
+  font-weight: bold;
+  text-align: center;
+}
+#discourse .vertical_box.right {
+  margin-right: 0;
 }
 #join {
   background: url('../img/sitebackground9.jpg') no-repeat center center;
@@ -241,7 +276,6 @@ h6 {
   height: 516px;
   margin: -258px 0 0 -500px;
 }
-#why_discourse > div,
 #guest > div,
 #why > div,
 #why_two > div,

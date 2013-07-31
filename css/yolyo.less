@@ -124,7 +124,8 @@ h1, h2, h3, h4, h5, h6 {
   background: url('../img/sitebackground6_edit.jpg') no-repeat center center;
 }
 #forum {
-  background: url('../img/sitebackground7.jpg') no-repeat center center;
+  // background: url('../img/sitebackground7.jpg') no-repeat center center;
+  background: url('../img/wall.jpg') no-repeat center center;
   & h2 {
   }
   &.content_wrap > div {
@@ -165,8 +166,46 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
-#why_discourse {
-  background: url('../img/sitebackground8.jpg') no-repeat center center;
+#discourse {
+  // background: url('../img/sitebackground8.jpg') no-repeat center center;
+  background: url('../img/bird-green.jpg') no-repeat center center;
+  &.content_wrap > div {
+    position: absolute;
+    top: 50%;
+    height: 600px;
+    left: 0;
+    right: 0;
+    margin-top: -350px;
+    // border: 1px solid #000;
+  }
+  .vertical_box_container {
+    margin: 20px auto;
+    width: 970px;
+    // border: 1px solid #000;
+  }
+  .paragraph_content > h2 {
+    width: 960px;
+    float: none;
+    margin: 0 auto 25px;
+    text-align: right;
+  }
+  .vertical_box {
+    h2 {
+      float: none;
+      font-weight: bold;
+      text-align: center;
+    }
+    background: rgba(255, 255, 255, 0.95);
+    padding: 5px 20px;
+    width: 300px;
+    height: 500px;
+    display: inline-block;
+    margin-right: 35px;
+    float: left;
+    &.right {
+      margin-right: 0;
+    }
+  }
 }
 #join {
   background: url('../img/sitebackground9.jpg') no-repeat center center;
@@ -274,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-#why_discourse > div, #guest > div, #why > div, #why_two > div, #why_three > div, #action > div {
+#guest > div, #why > div, #why_two > div, #why_three > div, #action > div {
   position: absolute;
   top: 50%;
   left: 50%;
