@@ -195,15 +195,29 @@ h1, h2, h3, h4, h5, h6 {
       font-weight: bold;
       text-align: center;
     }
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.9);
     padding: 5px 20px;
     width: 300px;
-    height: 500px;
+    // height: 500px;
     display: inline-block;
     margin-right: 35px;
     float: left;
+    ul {
+      margin-top: 20px;
+      padding-left: 25px;
+      font-size: 0.9em;
+    }
     &.right {
       margin-right: 0;
+    }
+    &.middle {
+      ul {
+        margin-top: 100px;
+      }
+      background-image: url('../img/discourse.png');
+      background-color: rgba(255, 255, 255, 0.9);
+      background-position: top 110px center;
+      background-repeat: no-repeat;
     }
   }
 }

@@ -169,10 +169,9 @@ h6 {
   text-align: right;
 }
 #discourse .vertical_box {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.9);
   padding: 5px 20px;
   width: 300px;
-  height: 500px;
   display: inline-block;
   margin-right: 35px;
   float: left;
@@ -182,8 +181,22 @@ h6 {
   font-weight: bold;
   text-align: center;
 }
+#discourse .vertical_box ul {
+  margin-top: 20px;
+  padding-left: 25px;
+  font-size: 0.9em;
+}
 #discourse .vertical_box.right {
   margin-right: 0;
+}
+#discourse .vertical_box.middle {
+  background-image: url('../img/discourse.png');
+  background-color: rgba(255, 255, 255, 0.9);
+  background-position: top 110px center;
+  background-repeat: no-repeat;
+}
+#discourse .vertical_box.middle ul {
+  margin-top: 100px;
 }
 #join {
   background: url('../img/sitebackground9.jpg') no-repeat center center;
