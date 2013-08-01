@@ -162,11 +162,33 @@ h6 {
   margin: 20px auto;
   width: 970px;
 }
+#discourse .footnote {
+  font-size: 0.59em;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 30px;
+  padding: 10px 15px;
+}
+#discourse .footnote a:hover {
+  text-decoration: none;
+  color: #000;
+}
+#discourse .footnote ol {
+  letter-spacing: 1.5px;
+  line-height: 2em;
+  margin: 0;
+}
 #discourse .paragraph_content > h2 {
   width: 960px;
   float: none;
   margin: 0 auto 25px;
   text-align: right;
+}
+#discourse .paragraph_content > h2 > span {
+  padding: 10px 15px 10px 20px;
+  background: rgba(255, 255, 255, 0.9);
+}
+#discourse .paragraph_content > h2 > span span {
+  color: #329bb2;
 }
 #discourse .vertical_box {
   background: rgba(255, 255, 255, 0.9);
@@ -175,6 +197,11 @@ h6 {
   display: inline-block;
   margin-right: 35px;
   float: left;
+}
+#discourse .vertical_box code {
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  color: #555;
 }
 #discourse .vertical_box h2 {
   float: none;
