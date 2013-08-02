@@ -120,11 +120,15 @@ h6 {
 #forum.content_wrap > div {
   position: absolute;
   top: 50%;
-  height: 450px;
-  margin-top: -300px;
+  height: 481px;
+  margin-top: -200px;
   width: 100%;
 }
 #forum .slogan {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 5;
   font-size: 2em;
   text-align: center;
   line-height: 1.2em;
@@ -136,16 +140,23 @@ h6 {
   color: #428bca;
 }
 #forum .paragraph_content h2 {
+  z-index: 0;
+  font-size: 1.5em;
+  font-weight: bold;
   float: none;
-  width: 800px;
+  margin: 15px 0 170px;
   text-align: center;
-  margin: 0 auto 25px;
 }
-#forum .paragraph_content > p {
+#forum .paragraph_content .slogan_explanation {
+  position: absolute;
+  z-index: 0;
+  top: -100px;
   background: rgba(255, 255, 255, 0.8);
-  padding: 15px 25px;
-  width: 800px;
-  margin: 25px auto 0;
+  padding: 15px 40px 25px;
+  line-height: 1.7em;
+  width: 850px;
+  left: 50%;
+  margin-left: -425px;
 }
 #forum_screen_shot .modal-dialog {
   width: 1000px;

@@ -85,8 +85,9 @@ $(function () {
   });
 
   $(document).on('keydown', function (evt) {
-    if (evt.keyCode === 27 && $('#join_modal_yolyo').is(':visible')) {
-      $('#join_modal_yolyo').modal('hide');
+    if (evt.keyCode === 27) {
+      if ($('#join_modal_yolyo').is(':visible')) $('#join_modal_yolyo').modal('hide');
+      if ($('#forum_screen_shot').is(':visible')) $('#forum_screen_shot').modal('hide');
     }
     if (!$('.modal-backdrop').length) {
       var windowHeight = $(window).height();

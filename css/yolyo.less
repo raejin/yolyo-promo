@@ -126,17 +126,19 @@ h1, h2, h3, h4, h5, h6 {
 #forum {
   // background: url('../img/sitebackground7.jpg') no-repeat center center;
   background: url('../img/wall.jpg') no-repeat center center;
-  & h2 {
-  }
   &.content_wrap > div {
     position: absolute;
     top: 50%;
     // border: 1px solid #000;
-    height: 450px;
-    margin-top: -300px;
+    height: 481px;
+    margin-top: -200px;
     width: 100%;
   }
   & .slogan {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 5;
     strong {
       color: @primary;
     }
@@ -149,19 +151,23 @@ h1, h2, h3, h4, h5, h6 {
   }
   .paragraph_content {
     h2 {
-      // position: absolute;
-      // left: 50%;
+      z-index: 0;
+      font-size: 1.5em;
+      font-weight: bold;
       float: none;
-      width: 800px;
-      // border: 1px solid #000;
+      margin: 15px 0 170px;
       text-align: center;
-      margin: 0 auto 25px;
     }
-    & > p {
+    .slogan_explanation {
+      position: absolute;
+      z-index: 0;
+      top: -100px;
       background: rgba(255, 255, 255, 0.8);
-      padding: 15px 25px;
-      width: 800px;
-      margin: 25px auto 0;
+      padding: 15px 40px 25px;
+      line-height: 1.7em;
+      width: 850px;
+      left: 50%;
+      margin-left: -425px;
 
     }
   }
