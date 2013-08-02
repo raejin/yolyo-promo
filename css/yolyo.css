@@ -147,6 +147,28 @@ h6 {
   width: 800px;
   margin: 25px auto 0;
 }
+#forum_screen_shot .modal-dialog {
+  width: 1000px;
+  margin-left: -500px;
+  background-image: url('../img/forumScreenshot.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 710px;
+  top: 50%;
+  position: absolute;
+  margin-top: -355px;
+}
+#forum_screen_shot .modal-dialog .icon-remove {
+  cursor: pointer;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  background-color: #fff;
+  text-align: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 25px;
+}
 #discourse {
   background: url('../img/bird-green.jpg') no-repeat center center;
 }
@@ -198,6 +220,13 @@ h6 {
   margin-right: 35px;
   float: left;
 }
+#discourse .vertical_box .forum_screen_shot {
+  height: 215px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  margin-top: 5px;
+}
 #discourse .vertical_box code {
   background-color: #ddd;
   border: 1px solid #ccc;
@@ -212,6 +241,15 @@ h6 {
   margin-top: 20px;
   padding-left: 25px;
   font-size: 0.9em;
+}
+#discourse .vertical_box.left {
+  position: relative;
+  background-image: url('../img/forumScreenshot.png');
+  background-color: rgba(255, 255, 255, 0.9);
+  background-position: top 110px center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 350px;
 }
 #discourse .vertical_box.right {
   margin-right: 0;
@@ -377,6 +415,9 @@ h6 {
   background: rgba(255, 255, 255, 0.9);
   padding: 25px 0;
   font-weight: bold;
+}
+#join .slogan span {
+  color: #428bca;
 }
 #join > div {
   position: absolute;
