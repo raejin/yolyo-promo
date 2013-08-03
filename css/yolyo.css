@@ -430,6 +430,13 @@ h6 {
   padding: 25px 0;
   font-weight: bold;
 }
+#join .slogan p {
+  font-size: 0.38em;
+  margin: 15px 0 0;
+  line-height: 1em;
+  color: #888;
+  font-weight: normal;
+}
 #join .slogan span {
   color: #428bca;
 }
