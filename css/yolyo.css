@@ -277,6 +277,9 @@ h6 {
 #join {
   background: url('../img/sitebackground9.jpg') no-repeat center center;
 }
+#join_modal_user form {
+  margin-top: 15px;
+}
 #join_modal_yolyo .modal-body {
   padding-bottom: 20px;
 }
@@ -318,8 +321,8 @@ h6 {
   padding: 40px 35px 15px;
   background: rgba(255, 255, 255, 0.7);
   width: 750px;
-  height: 330px;
-  margin: -165px 0 0 -375px;
+  height: 570px;
+  margin: -285px 0 0 -375px;
 }
 #action.content_wrap > div {
   background: rgba(255, 255, 255, 0.4);
