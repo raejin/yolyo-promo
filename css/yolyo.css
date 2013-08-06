@@ -530,7 +530,8 @@ h6 {
   color: #139AE9;
 }
 .content_wrapper {
-  min-width: 1000px;
+  min-width: 1291px;
+  min-height: 720px;
   height: 100%;
   width: 100%;
   /*background: #77BAB9;*/
