@@ -53,6 +53,7 @@ $(function () {
   });
 
   var hashMap = [
+    'infographic',
     'mission',
     'why',
     'why_two',

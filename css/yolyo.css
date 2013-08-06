@@ -38,8 +38,16 @@ h6 {
   background-size: auto 100% !important;
 }
 #infographic {
-  background: #F6F2E3;
-  vertical-align: middle;
+  height: 900px;
+  background-color: #111;
+}
+#infographic > div {
+  position: absolute;
+  height: 900px;
+  width: 1440px;
+  top: 50%;
+  left: 50%;
+  margin: -450px 0 0 -720px;
 }
 #logo_page {
   background: url('../img/sitebackground0.jpg') no-repeat center center;
@@ -57,15 +65,6 @@ h6 {
   width: 1000px;
   height: 328px;
   background-size: 100%;
-}
-#infographic div {
-  position: absolute;
-  top: 50%;
-  margin-top: -35px;
-  text-align: center;
-  width: 100%;
-  height: 70px;
-  font-size: 3em;
 }
 #mission div {
   color: #000;
