@@ -533,15 +533,19 @@ h6 {
 }
 #team .paragraph_content > h2 {
   font-size: 2.5em;
-  position: relative;
-  top: 50px;
+  position: absolute;
+  float: none;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
 }
 #team > div:first-child {
-  width: 1200px;
-  height: 700px;
+  width: 700px;
+  height: 545px;
   position: absolute;
   left: 50%;
-  margin-left: -600px;
+  margin-left: -400px;
+  top: 50%;
+  margin-top: -350px;
   font-size: 0.95em;
 }
 #team > div:first-child #member_emily {
@@ -551,6 +555,8 @@ h6 {
   background-image: url('../img/sitebackground10_rae.png');
 }
 #team > div:first-child .member_quote {
+  margin-bottom: 20px;
+  float: right;
   display: inline-block;
   width: 500px;
   height: 260px;

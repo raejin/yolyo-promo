@@ -618,21 +618,22 @@ h1, h2, h3, h4, h5, h6 {
   .paragraph_content {
     & > h2 {
       font-size: 2.5em;
-      position: relative;
-      top: 50px;
+      position: absolute;
+      float: none;
+      color: #fff;
+      text-shadow: 2px 2px 2px #000;
     }
   }
   & > div:first-child {
-    width: 1200px;
-    height: 700px;
+
+    width: 700px;
+    height: 545px;
     // font-weight: bold;
     position: absolute;
     left: 50%;
-    margin-left: -600px;
-    // border: 1px solid #000;
-    // p {
-    //   font-size: 0.6em;
-    // }
+    margin-left: -400px;
+    top: 50%;
+    margin-top: -350px;
     font-size: 0.95em;
     #member_emily {
       background-image: url('../img/sitebackground10_emily.png');
@@ -641,6 +642,8 @@ h1, h2, h3, h4, h5, h6 {
       background-image: url('../img/sitebackground10_rae.png');
     }
     .member_quote {
+      margin-bottom: 20px;
+      float: right;
       display: inline-block;
       width: 500px;
       height: 260px;
