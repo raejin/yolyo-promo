@@ -24,7 +24,7 @@ $(function () {
   }
   function goSection(action, windowHeight, scrollTop) {
     var currentPageNumber = Math.floor(scrollTop / windowHeight),
-        nextPageNumber = (currentPageNumber !== 10) ? currentPageNumber + 1: 10,
+        nextPageNumber = (currentPageNumber !== 11) ? currentPageNumber + 1: 11,
         prevPageNumber = currentPageNumber ? currentPageNumber - 1: 0;
 
     if (action === 'next') {

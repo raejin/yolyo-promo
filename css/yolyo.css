@@ -38,16 +38,86 @@ h6 {
   background-size: auto 100% !important;
 }
 #infographic {
-  height: 900px;
-  background-color: #111;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtdWNnZy1nZW5lcmF0ZWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzViYjBlMiIgc3RvcC1vcGFjaXR5PSIxIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGZhODk4IiBzdG9wLW9wYWNpdHk9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+PC9zdmc+);
+  background-image: -moz-linear-gradient(-90deg, #5bb0e2 0%,#0fa898 100%);
+  background-image: -webkit-linear-gradient(-90deg, #5bb0e2 0%,#0fa898 100%);
+  background-image: -o-linear-gradient(-90deg, #5bb0e2 0%,#0fa898 100%);
+  background-image: linear-gradient(180deg, #5bb0e2 0%,#0fa898 100%);
 }
-#infographic > div {
+#infographic .bottom-stripe {
+  background-image: url('../img/info-bottom.png');
+  background-repeat: repeat;
+  height: 20px;
+  position: relative;
+  top: 90px;
+}
+#infographic > .first-div {
   position: absolute;
-  height: 900px;
-  width: 1440px;
+  width: 950px;
+  height: 620px;
   top: 50%;
   left: 50%;
-  margin: -450px 0 0 -720px;
+  margin: -330px 0 0 -475px;
+}
+#infographic .sprite-infographic-logocopy,
+#infographic .sprite-infographic-conversation,
+#infographic .sprite-infographic-people,
+#infographic .sprite-infographic-career,
+#infographic .sprite-infographic-passion,
+#infographic .sprite-infographic-plus,
+#infographic .sprite-infographic-equal {
+  background-image: url('../img/sprites/infographic.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+}
+#infographic .sprite-infographic-logocopy {
+  background-position: 0px 0px;
+  width: 728px;
+  height: 272px;
+  top: 80px;
+}
+#infographic .sprite-infographic-conversation {
+  background-position: 0px -272px;
+  width: 204px;
+  height: 148px;
+  top: 30px;
+}
+#infographic .sprite-infographic-people {
+  background-position: -204px -272px;
+  width: 200px;
+  height: 78px;
+}
+#infographic .sprite-infographic-career {
+  background-position: 0px -420px;
+  width: 179px;
+  height: 167px;
+  top: 30px;
+}
+#infographic .sprite-infographic-passion {
+  background-position: -179px -420px;
+  width: 129px;
+  height: 132px;
+  top: 20px;
+}
+#infographic .sprite-infographic-plus {
+  background-position: -404px -272px;
+  width: 41px;
+  height: 41px;
+  top: -20px;
+  margin: 0 10px;
+}
+#infographic .sprite-infographic-equal {
+  background-position: -445px -272px;
+  width: 31px;
+  height: 40px;
+  top: 50px;
+}
+#infographic .infographic_placement {
+  text-align: center;
+}
+#infographic .infographic_placement .info-combo {
+  text-align: center;
 }
 #logo_page {
   background: url('../img/sitebackground0.jpg') no-repeat center center;
@@ -529,8 +599,7 @@ h6 {
   color: #139AE9;
 }
 .content_wrapper {
-  min-width: 1291px;
-  min-height: 720px;
+  min-width: 1000px;
   height: 100%;
   width: 100%;
   /*background: #77BAB9;*/

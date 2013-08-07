@@ -1,0 +1,46 @@
+/* glue: 0.3 hash: 9f85a834d0 */
+.sprite-infographic-logocopy,
+.sprite-infographic-conversation,
+.sprite-infographic-people,
+.sprite-infographic-career,
+.sprite-infographic-passion,
+.sprite-infographic-plus,
+.sprite-infographic-equal {
+  background-image: url('infographic.png');
+  background-repeat: no-repeat;
+}
+.sprite-infographic-logocopy {
+  background-position: 0px 0px;
+  width: 728px;
+  height: 272px;
+}
+.sprite-infographic-conversation {
+  background-position: 0px -272px;
+  width: 204px;
+  height: 148px;
+}
+.sprite-infographic-people {
+  background-position: -204px -272px;
+  width: 200px;
+  height: 78px;
+}
+.sprite-infographic-career {
+  background-position: 0px -420px;
+  width: 179px;
+  height: 167px;
+}
+.sprite-infographic-passion {
+  background-position: -179px -420px;
+  width: 129px;
+  height: 132px;
+}
+.sprite-infographic-plus {
+  background-position: -404px -272px;
+  width: 41px;
+  height: 41px;
+}
+.sprite-infographic-equal {
+  background-position: -445px -272px;
+  width: 31px;
+  height: 40px;
+}
